@@ -1,0 +1,18 @@
+{
+  "item.christmasminecraftmod.sapphire": "Sapphire",
+  "item.christmasminecraftmod.raw_sapphire": "Raw Sapphire",
+
+  "item.christmasminecraftmod.metal_detector": "Metal Detector",
+
+  "block.christmasminecraftmod.sapphire_block": "Block of Sapphire",
+  "block.christmasminecraftmod.raw_sapphire_block": "Block of Raw Sapphire",
+
+  "block.christmasminecraftmod.sound_block": "Sound Block",
+
+  "block.christmasminecraftmod.sapphire_ore": "Sapphire Ore",
+  "block.christmasminecraftmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.christmasminecraftmod.nether_sapphire_ore": "Nether Sapphire Ore",
+  "block.christmasminecraftmod.end_sapphire_ore": "Endstone Sapphire Ore",
+
+  "creativetab.christmas_tab": "Christmas Tab"
+}
