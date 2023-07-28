@@ -1,6 +1,7 @@
 package net.tcjbeee.christmasminecraftmod.item;
 
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -50,6 +51,16 @@ public class ModItems {
     public static final RegistryObject<Item> SOAKED_CHRISTMAS_PUDDING = ITEMS.register("soaked_christmas_pudding",() -> new Item(new Item.Properties().food(ModFoods.SOAKED_CHRISTMAS_PUDDING)));
     public static final RegistryObject<Item> STUFFING = ITEMS.register("stuffing",() -> new Item(new Item.Properties().food(ModFoods.STUFFING)));
     public static final RegistryObject<Item> YORKSHIRE_PUDDING = ITEMS.register("yorkshire_pudding",() -> new Item(new Item.Properties().food(ModFoods.YORKSHIRE_PUDDING)));
+    public static final RegistryObject<Item> BLUE_QUALITY_STREET = ITEMS.register("blue_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> CYAN_QUALITY_STREET = ITEMS.register("cyan_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> LIME_QUALITY_STREET = ITEMS.register("lime_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> ORANGE_QUALITY_STREET = ITEMS.register("orange_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> PINK_QUALITY_STREET = ITEMS.register("pink_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> PURPLE_QUALITY_STREET = ITEMS.register("purple_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> RED_QUALITY_STREET = ITEMS.register("red_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> YELLOW_QUALITY_STREET = ITEMS.register("yellow_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> GREEN_QUALITY_STREET = ITEMS.register("green_quality_street",() -> new Item(new Item.Properties().food(ModFoods.BLUE_QUALITY_STREET)));
+    public static final RegistryObject<Item> QUALITY_STREET_BOX = ITEMS.register("quality_street_box",() -> new Item(new Item.Properties().food(ModFoods.QUALITY_STREET_BOX).rarity(Rarity.RARE)));
 
     // CUSTOM ITEMS
     public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",

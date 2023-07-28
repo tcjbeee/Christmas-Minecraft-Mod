@@ -26,7 +26,7 @@ public class ModFoods {
     public static final FoodProperties CHRISTMAS_PUDDING = new FoodProperties.Builder().nutrition(6)
             .saturationMod(0.5f).effect(() -> new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200), 0.3f).build();
 
-    public static final FoodProperties COOKED_BACON =new FoodProperties.Builder().nutrition(6)
+    public static final FoodProperties COOKED_BACON = new FoodProperties.Builder().nutrition(6)
             .saturationMod(0.5f).build();
 
     public static final FoodProperties COOKED_SAUSAGE = new FoodProperties.Builder().nutrition(7)
@@ -67,5 +67,35 @@ public class ModFoods {
 
     public static final FoodProperties YORKSHIRE_PUDDING = new FoodProperties.Builder().nutrition(4)
             .saturationMod(0.6f).build();
+
+    public static final FoodProperties BLUE_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties CYAN_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties LIME_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties ORANGE_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties PINK_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties PURPLE_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties RED_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties YELLOW_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties GREEN_QUALITY_STREET = new FoodProperties.Builder().nutrition(2)
+            .saturationMod(0.5f).build();
+
+    public static final FoodProperties QUALITY_STREET_BOX = new FoodProperties.Builder().nutrition(18)
+            .saturationMod(0.9f).effect(() -> new MobEffectInstance(MobEffects.REGENERATION, 1200), 1f).build();
 
 }

@@ -18,9 +18,17 @@ public class ModItemModelProvider extends ItemModelProvider {
     @Override
     protected void registerModels() {
 
+        // Valuables
+        simpleItem(ModItems.SAPPHIRE);
+        simpleItem(ModItems.RAW_SAPPHIRE);
+
+
+        // Foods
         simpleItem(ModItems.AFTER_EIGHTS);
         simpleItem(ModItems.BRUSSEL_SPROUT);
         simpleItem(ModItems.CANDYCANE);
+        simpleItem(ModItems.CARBONARA);
+        simpleItem(ModItems.CHOCOLATE_ORANGE);
         simpleItem(ModItems.CHRISTMAS_PUDDING);
         simpleItem(ModItems.COOKED_BACON);
         simpleItem(ModItems.COOKED_SAUSAGE);
@@ -34,8 +42,24 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.RAW_SAUSAGE);
         simpleItem(ModItems.RAW_TURKEY);
         simpleItem(ModItems.SOAKED_CHRISTMAS_PUDDING);
+        simpleItem(ModItems.STRAWBERRY);
         simpleItem(ModItems.STUFFING);
         simpleItem(ModItems.YORKSHIRE_PUDDING);
+        simpleItem(ModItems.BLUE_QUALITY_STREET);
+        simpleItem(ModItems.CYAN_QUALITY_STREET);
+        simpleItem(ModItems.GREEN_QUALITY_STREET);
+        simpleItem(ModItems.LIME_QUALITY_STREET);
+        simpleItem(ModItems.ORANGE_QUALITY_STREET);
+        simpleItem(ModItems.PINK_QUALITY_STREET);
+        simpleItem(ModItems.PURPLE_QUALITY_STREET);
+        simpleItem(ModItems.RED_QUALITY_STREET);
+        simpleItem(ModItems.YELLOW_QUALITY_STREET);
+        simpleItem(ModItems.QUALITY_STREET_BOX);
+
+        // Tools
+
+        handheldItem(ModItems.METAL_PIPE);
+        handheldItem(ModItems.METAL_DETECTOR);
 
     }
 

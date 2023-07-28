@@ -51,6 +51,16 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.SOAKED_CHRISTMAS_PUDDING.get());
                         pOutput.accept(ModItems.STUFFING.get());
                         pOutput.accept(ModItems.YORKSHIRE_PUDDING.get());
+                        pOutput.accept(ModItems.BLUE_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.CYAN_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.GREEN_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.ORANGE_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.YELLOW_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.LIME_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.PINK_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.PURPLE_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.RED_QUALITY_STREET.get());
+                        pOutput.accept(ModItems.QUALITY_STREET_BOX.get());
 
                         // BLOCKS
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
