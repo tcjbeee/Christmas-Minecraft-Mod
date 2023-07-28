@@ -20,11 +20,39 @@ public class ModCreativeModeTabs {
                     .displayItems((pParameters, pOutput) -> {
 
                     // ADD ITEMS TO MOD CREATIVE TAB HERE WITH THESE LINES
+
+                        // VALUABLES
                         pOutput.accept(ModItems.SAPPHIRE.get());
                         pOutput.accept(ModItems.RAW_SAPPHIRE.get());
 
+                        // TOOLS & WEAPONS
                         pOutput.accept(ModItems.METAL_DETECTOR.get());
+                        pOutput.accept(ModItems.METAL_PIPE.get());
 
+                        // FOODS
+                        pOutput.accept(ModItems.STRAWBERRY.get());
+                        pOutput.accept(ModItems.CHOCOLATE_ORANGE.get());
+                        pOutput.accept(ModItems.CARBONARA.get());
+                        pOutput.accept(ModItems.AFTER_EIGHTS.get());
+                        pOutput.accept(ModItems.BRUSSEL_SPROUT.get());
+                        pOutput.accept(ModItems.CANDYCANE.get());
+                        pOutput.accept(ModItems.CHRISTMAS_PUDDING.get());
+                        pOutput.accept(ModItems.COOKED_BACON.get());
+                        pOutput.accept(ModItems.COOKED_SAUSAGE.get());
+                        pOutput.accept(ModItems.COOKED_TURKEY.get());
+                        pOutput.accept(ModItems.CRANBERRY_SAUCE.get());
+                        pOutput.accept(ModItems.FLAMING_CHRISTMAS_PUDDING.get());
+                        pOutput.accept(ModItems.GOLDEN_TURKEY.get());
+                        pOutput.accept(ModItems.PIGS_IN_BLANKETS.get());
+                        pOutput.accept(ModItems.RAW_BACON.get());
+                        pOutput.accept(ModItems.RAW_PIGS_IN_BLANKETS.get());
+                        pOutput.accept(ModItems.RAW_SAUSAGE.get());
+                        pOutput.accept(ModItems.RAW_TURKEY.get());
+                        pOutput.accept(ModItems.SOAKED_CHRISTMAS_PUDDING.get());
+                        pOutput.accept(ModItems.STUFFING.get());
+                        pOutput.accept(ModItems.YORKSHIRE_PUDDING.get());
+
+                        // BLOCKS
                         pOutput.accept(ModBlocks.SAPPHIRE_BLOCK.get());
                         pOutput.accept(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
 

@@ -1,21 +1,23 @@
 package net.tcjbeee.christmasminecraftmod.item.custom;
 
-import net.minecraft.client.resources.language.I18n;
+
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
+import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
+import net.minecraft.world.InteractionResultHolder;
 import net.minecraft.world.entity.player.Player;
-import net.minecraft.world.item.Item;
+import net.minecraft.world.item.*;
 import net.minecraft.world.item.context.UseOnContext;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.tcjbeee.christmasminecraftmod.sound.ModSounds;
 
-public class MetalDetectorItem extends Item {
-    public MetalDetectorItem(Properties pProperties) {
+public class MetalPipe extends SwordItem {
 
+    public MetalPipe(Tier pTier, Properties pProperties){
+        super(Tiers.IRON, 2, 3.0f, pProperties);
 
-        super(pProperties);
     }
 
     @Override
@@ -28,16 +30,11 @@ public class MetalDetectorItem extends Item {
             for(int i = 0; i<= positionClicked.getY() + 64; i++) {
                 BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
 
-                if(isValuableBlock(state)) {
-                    outputValuableCoordinates(positionClicked.below(i), player, state.getBlock());
+                if(isValidBlock(player)) {
                     foundBlock = true;
-
+                    player.playSound(ModSounds.METAL_PIPE.get(), 1f, 1f);
                     break;
                 }
-            }
-
-            if(!foundBlock) {
-                player.sendSystemMessage(Component.literal("No Valuables Found!"));
             }
 
         }
@@ -48,12 +45,20 @@ public class MetalDetectorItem extends Item {
         return InteractionResult.SUCCESS;
     }
 
-    private void outputValuableCoordinates(BlockPos blockPos, Player player, Block block) {
-        player.sendSystemMessage(Component.literal("Found " + I18n.get(block.getDescriptionId()) + " at " +
-                "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
+    private boolean isValidBlock(Player player) {
+        return true;
     }
 
-    private boolean isValuableBlock(BlockState state) {
-        return state.is(Blocks.IRON_ORE) || state.is(Blocks.DIAMOND_ORE);
-    }
+   /* @Override
+    public InteractionResultHolder<ItemStack> use(Level pLevel, Player pPlayer, InteractionHand pUsedHand) {
+        if(pLevel.isClientSide() && pUsedHand == InteractionHand.MAIN_HAND) {
+            pPlayer.playSound(ModSounds.METAL_PIPE.get(), 1f, 1f);
+
+
+        }
+
+
+        return super.use(pLevel, pPlayer, pUsedHand);
+    } */
+
 }
