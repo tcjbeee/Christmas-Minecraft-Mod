@@ -4,11 +4,13 @@ import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Rarity;
 import net.minecraft.world.item.SwordItem;
 import net.minecraft.world.item.Tiers;
+import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 import net.tcjbeee.christmasminecraftmod.ChristmasMinecraftMod;
+import net.tcjbeee.christmasminecraftmod.entity.ModEntities;
 import net.tcjbeee.christmasminecraftmod.item.custom.MetalDetectorItem;
 import net.tcjbeee.christmasminecraftmod.item.custom.MetalPipe;
 import net.tcjbeee.christmasminecraftmod.item.custom.ModFoods;
@@ -28,6 +30,9 @@ public class ModItems {
     public static final RegistryObject<Item> SAPPHIRE = ITEMS.register("sapphire",() -> new Item(new Item.Properties()));
 
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",() -> new Item(new Item.Properties()));
+
+    // MOB SPAWN EGGS
+    public static final RegistryObject<Item> TURKEY_SPAWN_EGG = ITEMS.register("turkey_spawn_egg",() -> new ForgeSpawnEggItem(ModEntities.TURKEY, 0xb0241a, 0x634b35, new Item.Properties()));
 
     // FOODS
     public static final RegistryObject<Item> STRAWBERRY = ITEMS.register("strawberry",() -> new Item(new Item.Properties().food(ModFoods.STRAWBERRY)));

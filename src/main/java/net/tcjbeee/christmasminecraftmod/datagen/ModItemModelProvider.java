@@ -22,6 +22,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         simpleItem(ModItems.SAPPHIRE);
         simpleItem(ModItems.RAW_SAPPHIRE);
 
+        // Mob Spawn Eggs
+        withExistingParent(ModItems.TURKEY_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+
 
         // Foods
         simpleItem(ModItems.AFTER_EIGHTS);

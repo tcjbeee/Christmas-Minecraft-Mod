@@ -1,6 +1,7 @@
 package net.tcjbeee.christmasminecraftmod;
 
 import com.mojang.logging.LogUtils;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -13,6 +14,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.tcjbeee.christmasminecraftmod.block.ModBlocks;
+import net.tcjbeee.christmasminecraftmod.entity.ModEntities;
+import net.tcjbeee.christmasminecraftmod.entity.client.TurkeyRenderer;
 import net.tcjbeee.christmasminecraftmod.item.ModCreativeModeTabs;
 import net.tcjbeee.christmasminecraftmod.item.ModItems;
 import net.tcjbeee.christmasminecraftmod.sound.ModSounds;
@@ -35,6 +38,7 @@ public class ChristmasMinecraftMod
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
         ModSounds.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
 
@@ -71,7 +75,7 @@ public class ChristmasMinecraftMod
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event)
         {
-
+            EntityRenderers.register(ModEntities.TURKEY.get(), TurkeyRenderer::new);
         }
     }
 }
