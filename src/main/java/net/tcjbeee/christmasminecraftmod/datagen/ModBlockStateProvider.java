@@ -23,6 +23,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
         blockWithItem(ModBlocks.DEEPSLATE_SAPPHIRE_ORE);
         blockWithItem(ModBlocks.NETHER_SAPPHIRE_ORE);
         blockWithItem(ModBlocks.END_SAPPHIRE_ORE);
+        blockWithItem(ModBlocks.ICE_BRICK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject){

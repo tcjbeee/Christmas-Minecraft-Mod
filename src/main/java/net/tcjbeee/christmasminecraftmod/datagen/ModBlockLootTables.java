@@ -23,6 +23,8 @@ public class ModBlockLootTables extends BlockLootSubProvider {
         dropSelf(ModBlocks.RAW_SAPPHIRE_BLOCK.get());
         dropSelf(ModBlocks.SOUND_BLOCK.get());
 
+        dropWhenSilkTouch(ModBlocks.ICE_BRICK.get());
+
         add(ModBlocks.SAPPHIRE_ORE.get(),
                 (block) -> createOreDrop(ModBlocks.SAPPHIRE_ORE.get(), ModItems.RAW_SAPPHIRE.get()));
 
