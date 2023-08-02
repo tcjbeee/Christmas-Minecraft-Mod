@@ -1,5 +1,6 @@
 package net.tcjbeee.christmasminecraftmod.entity.custom;
 
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.entity.AgeableMob;
 import net.minecraft.world.entity.EntityType;
@@ -10,6 +11,7 @@ import net.minecraft.world.entity.ai.goal.RandomLookAroundGoal;
 import net.minecraft.world.entity.ai.goal.WaterAvoidingRandomStrollGoal;
 import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.level.Level;
+import net.tcjbeee.christmasminecraftmod.ChristmasMinecraftMod;
 import net.tcjbeee.christmasminecraftmod.entity.ModEntities;
 import org.jetbrains.annotations.Nullable;
 import software.bernie.geckolib.animatable.GeoEntity;
@@ -25,11 +27,11 @@ public class TurkeyEntity extends Animal implements GeoEntity {
         super(pEntityType, pLevel);
     }
 
-    public static AttributeSupplier setAttribute() {
+    public static AttributeSupplier setAttributes() {
         return Animal.createMobAttributes()
                 .add(Attributes.MAX_HEALTH, 16D)
                 .add(Attributes.ATTACK_DAMAGE, 3.0f)
-                .add(Attributes.MOVEMENT_SPEED, 0.4f).build();
+                .add(Attributes.MOVEMENT_SPEED, 0.3f).build();
     }
 
     @Override
@@ -56,11 +58,11 @@ public class TurkeyEntity extends Animal implements GeoEntity {
 
     private <T extends GeoAnimatable> PlayState predicate(AnimationState<T> tAnimationState) {
         if(tAnimationState.isMoving()) {
-            tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.turkey.walk", Animation.LoopType.LOOP));
+            tAnimationState.getController().setAnimation(RawAnimation.begin().then("turkey.animation.walk", Animation.LoopType.LOOP));
             return PlayState.CONTINUE;
         }
 
-        tAnimationState.getController().setAnimation(RawAnimation.begin().then("animation.turkey.idle", Animation.LoopType.LOOP));
+        tAnimationState.getController().setAnimation(RawAnimation.begin().then("turkey.animation.idle", Animation.LoopType.LOOP));
         return PlayState.CONTINUE;
 
     }

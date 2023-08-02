@@ -11,6 +11,6 @@ import net.tcjbeee.christmasminecraftmod.entity.custom.TurkeyEntity;
 public class ModEvents {
     @SubscribeEvent
     public static void entityAttributeEvent(EntityAttributeCreationEvent event) {
-        event.put(ModEntities.TURKEY.get(), TurkeyEntity.setAttribute());
+        event.put(ModEntities.TURKEY.get(), TurkeyEntity.setAttributes());
     }
 }

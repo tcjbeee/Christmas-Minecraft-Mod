@@ -15,8 +15,9 @@ public class ModEntities {
             DeferredRegister.create(ForgeRegistries.ENTITY_TYPES, ChristmasMinecraftMod.MODID);
 
     public static final RegistryObject<EntityType<TurkeyEntity>> TURKEY =
-            ENTITY_TYPES.register("turkey", () -> EntityType.Builder.of(TurkeyEntity::new, MobCategory.CREATURE)
-                    .sized(1.5f, 1.75f)
+            ENTITY_TYPES.register("turkey",
+                    () -> EntityType.Builder.of(TurkeyEntity::new, MobCategory.CREATURE)
+                    .sized(1f, 1.25f)
                     .build(new ResourceLocation(ChristmasMinecraftMod.MODID, "turkey").toString()));
 
     public static void register(IEventBus eventBus) {
