@@ -2,6 +2,7 @@ package net.tcjbeee.christmasminecraftmod;
 
 import com.mojang.logging.LogUtils;
 import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
@@ -20,6 +21,8 @@ import net.tcjbeee.christmasminecraftmod.item.ModCreativeModeTabs;
 import net.tcjbeee.christmasminecraftmod.item.ModItems;
 import net.tcjbeee.christmasminecraftmod.sound.ModSounds;
 import org.slf4j.Logger;
+
+import java.util.Locale;
 
 // The value here should match an entry in the META-INF/mods.toml file
 @Mod(ChristmasMinecraftMod.MODID)
@@ -79,5 +82,9 @@ public class ChristmasMinecraftMod
         {
             EntityRenderers.register(ModEntities.TURKEY.get(), TurkeyRenderer::new);
         }
+    }
+
+    public static ResourceLocation prefix(String name){
+        return new ResourceLocation(MODID, name.toLowerCase(Locale.ROOT));
     }
 }
